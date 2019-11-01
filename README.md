@@ -1,5 +1,7 @@
 # PetMobileApp
 
-Android Mobile Application where a Owner-user can make a profile for their pets. Regular-users can reserve a time slot to play with Owner-user's pets.
+Android Mobile Application where a Owner-user can make a profile for their pets. 
 
-Features include profile searching, time-slotting, and matching.
+Regular-users can look for pets available for adoption in their zipcode.
+
+Features include adopt feature and offer feature.
