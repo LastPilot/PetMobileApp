@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/pet_picture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/pet_picture_cd"
+            app:layout_constraintBottom_toTopOf="@+id/bio_title"
+            app:layout_constraintEnd_toStartOf="@+id/pet_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pet_picture" />
+
+        <EditText
+            android:id="@+id/pet_name"
+            android:layout_width="123dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="65dp"
+            android:ems="10"
+            android:hint="@string/pet_name"
+            android:inputType="textPersonName"
+            android:text="@string/pet_name"
+            app:layout_constraintBottom_toTopOf="@+id/pet_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pet_picture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/pet_type"
+            android:layout_width="123dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="77dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toTopOf="@+id/edit_bio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pet_picture"
+            app:layout_constraintTop_toBottomOf="@+id/pet_name" />
+
+        <TextView
+            android:id="@+id/bio_title"
+            style="@style/bio_style"
+            android:layout_width="136dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="251dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/galada"
+            android:text="@string/bio_title"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_bio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pet_picture" />
+
+        <EditText
+            android:id="@+id/edit_bio"
+            android:layout_width="339dp"
+            android:layout_height="91dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="@string/bio_hint"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toTopOf="@+id/contact_info_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bio_title" />
+
+        <TextView
+            android:id="@+id/contact_info_title"
+            android:layout_width="136dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="251dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/contact_info_title"
+            app:layout_constraintBottom_toTopOf="@+id/email_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_bio" />
+
+        <EditText
+            android:id="@+id/email_edit"
+            android:layout_width="294dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/editText5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_info_title" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="294dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintBottom_toTopOf="@+id/editText6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_edit" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="294dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="276dp"
+            android:layout_marginBottom="36dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
