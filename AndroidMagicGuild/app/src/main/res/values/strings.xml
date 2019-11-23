@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidMagicGuild</string>
+    <string name="logo" />
+    <string name="enter_zip_code">Enter Zip Code</string>
+    <string name="adopt_page_button">Find a New Friend</string>
+    <string name="offer_up_page">Put Up For Adoption</string>
 </resources>
