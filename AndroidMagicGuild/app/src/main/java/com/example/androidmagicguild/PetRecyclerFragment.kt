@@ -28,7 +28,6 @@ class PetRecyclerFragment : Fragment() {
             container,
             false
         )
-
         val recyclerViewPet = binding.recyclerForPet as RecyclerView
         recyclerViewPet.layoutManager = LinearLayoutManager(activity)
         recyclerViewPet.adapter = PetRecAdapter()
