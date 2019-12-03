@@ -5,10 +5,8 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class Pet(
-    val id : String? = "",
     val name : String? = "",
     val type : String? = "",
     val bio : String? = "",
     val contact : String? = "",
-    val zipCode : Int? = 0){
-}
+    val zipCode : Int? = 0)
