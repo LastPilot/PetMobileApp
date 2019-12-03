@@ -22,7 +22,7 @@ class PetRecAdapter : RecyclerView.Adapter<PetViewHolder>() {
     override fun onBindViewHolder(holder: PetViewHolder, position: Int) {
         var pet = petAdapter.returnArray()[position]
         holder.view.petNameTextView.text = pet?.name
-        holder.view.petImageView.setImageResource(R.drawable.ic_launcher_background)
+        petAdapter.setImageOnView(pet?.name, holder.view.petImageView)
     }
 }
 
