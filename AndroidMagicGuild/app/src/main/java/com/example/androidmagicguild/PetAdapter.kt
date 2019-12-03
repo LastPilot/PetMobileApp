@@ -18,9 +18,10 @@ class PetAdapter {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for(singleSnapShot in dataSnapshot.children) {
                     val post = singleSnapShot.getValue(Pet::class.java)
-                    array.add(post)
+                    if(post !in array) {
+                        array.add(post)
+                    }
                 }
-                System.out.println(array.size)
             }
             override fun onCancelled(databaseError: DatabaseError) { }
         })
@@ -32,7 +33,7 @@ class PetAdapter {
 
     }
 
-    fun returnArraySize(): Int {
+    fun arraySize(): Int {
         return this.array.size
     }
 

@@ -10,7 +10,7 @@ class PetRecAdapter : RecyclerView.Adapter<PetViewHolder>() {
 
     //num of items
     override fun getItemCount(): Int {
-        return 4
+        return petAdapter.arraySize()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetViewHolder {
@@ -20,7 +20,8 @@ class PetRecAdapter : RecyclerView.Adapter<PetViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: PetViewHolder, position: Int) {
-        holder.view.petNameTextView.text = "Bark Twain"
+        var pet = petAdapter.returnArray()[position]
+        holder.view.petNameTextView.text = pet?.name
         holder.view.petImageView.setImageResource(R.drawable.ic_launcher_background)
     }
 }
