@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/galada</item>
+        <item name="android:textSize">24sp</item>
     </style>
+
+    <style name="bio_style"></style>
 
 </resources>
