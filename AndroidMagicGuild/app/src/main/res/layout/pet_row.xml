@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/yellowPee">
+
+    <ImageView
+        android:id="@+id/petImageView"
+        android:layout_width="185dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <TextView
+        android:id="@+id/petNameTextView"
+        android:layout_width="185dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/namePlaceHolder"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
