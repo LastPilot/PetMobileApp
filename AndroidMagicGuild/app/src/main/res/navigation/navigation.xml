@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigattion"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        tools:layout="@layout/fragment_home_page"
+        android:name="com.example.androidmagicguild.HomePage"
+        android:label="HomePage" >
+        <action
+            android:id="@+id/action_homePage_to_petRecyclerFragment"
+            app:destination="@id/petRecyclerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petRecyclerFragment"
+        android:name="com.example.androidmagicguild.PetRecyclerFragment"
+        tools:layout="@layout/fragment_pet_recycler" >
+        android:label="PetRecyclerFragment" >
+        <action
+            android:id="@+id/action_petRecyclerFragment_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+</navigation>
