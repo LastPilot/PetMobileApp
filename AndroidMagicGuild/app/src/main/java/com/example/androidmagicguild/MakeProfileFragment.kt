@@ -14,8 +14,6 @@ import android.provider.MediaStore
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
-import android.os.Environment
-import android.provider.MediaStore.Images
 import java.io.*
 import java.util.*
 
@@ -70,20 +68,23 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
 
     }
     // Method to save an bitmap to a file
-    private fun getImageUri(bitmap:Bitmap): Uri {
+    private fun getImageFile(bitmap:Bitmap): File {
         // Initialize a new file instance to save bitmap object
-        val filePath = Environment.DIRECTORY_PICTURES
-        val dir = File(filePath)
-        if (!dir.exists())
-            dir.mkdirs()
-        val file = File(dir, "${UUID.randomUUID()}" + ".jpeg")
-        val fOut = FileOutputStream(file)
+        var file = context?.getDir("Images",Context.MODE_PRIVATE)
+        file = File(file,"${UUID.randomUUID()}.jpg")
 
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fOut)
-        fOut.flush()
-        fOut.close()
+        try{
+            // Compress the bitmap and save in jpg format
+            val stream:OutputStream = FileOutputStream(file)
+            bitmap.compress(Bitmap.CompressFormat.JPEG,100,stream)
+            stream.flush()
+            stream.close()
+        }catch (e:IOException){
+            e.printStackTrace()
+        }
 
-        return Uri.parse(file.path)
+        // Return the saved bitmap uri
+        return file
     }
 
 
@@ -94,7 +95,7 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
         var contactPhone = binding.phoneEdit.text.toString()
         var contactZip = binding.zipEdit.text.toString().toInt()
         val pet = Pet(name, pet_type, bio, contactEmail, contactZip)
-        petAdapter.add(pet, getImageUri(imgBitmap))
+        petAdapter.add(pet, getImageFile(imgBitmap))
         view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
     }
 

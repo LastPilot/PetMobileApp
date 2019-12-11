@@ -4,6 +4,10 @@ import android.widget.ImageView
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
+import java.io.File
+import com.google.firebase.storage.UploadTask
+import java.io.FileInputStream
+
 
 val copy = mutableListOf<Pet?>()
 
@@ -19,7 +23,7 @@ class PetAdapter {
 
     private var array = mutableListOf<Pet?>()
 
-    fun add(pet: Pet?, imgUri: Uri) {
+    fun add(pet: Pet?, file: File) {
         databaseReference = database.reference
         var key = databaseReference.child("allPets").push().key
         var ref = databaseReference.child("allPets/$key")
@@ -29,8 +33,9 @@ class PetAdapter {
         ref.updateChildren(childUpdates)
         array.add(pet)
 
-        val refStore = storageRef.child("${pet?.name}")
-        refStore.putFile(imgUri)
+        val refStore = storageRef.child("${pet?.name}.jpg")
+        val stream = FileInputStream(file)
+        refStore.putStream(stream).addOnSuccessListener { stream.close() }
     }
 
     //This method will display an image of a pet inside a view. Requires a view and the name of the pet
@@ -70,7 +75,6 @@ class PetAdapter {
     fun sortBy(zip: Int?) {
         copy.clear()
         for(pet in array){
-            System.out.println(pet?.zip)
             if(pet?.zip == zip) {
                 copy.add(pet)
             }
