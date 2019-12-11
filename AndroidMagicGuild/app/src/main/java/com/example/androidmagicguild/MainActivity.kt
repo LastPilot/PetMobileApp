@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         petAdapter.retrieveData()
+        petAdapter.sort()
         auth = FirebaseAuth.getInstance()
         auth.signInAnonymously()
         //petAdapter.add(Pet("newPet", "snake", "new pet", "3230", 53))
