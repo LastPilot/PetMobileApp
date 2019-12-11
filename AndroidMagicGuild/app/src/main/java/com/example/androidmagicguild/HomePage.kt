@@ -27,7 +27,17 @@ class HomePage : Fragment() {
         )
 
         binding.adoptPageButton.setOnClickListener { view: View ->
+            if(!(binding.editZipCode.text.toString().equals(""))) {
+                petAdapter.sortBy(binding.editZipCode.text.toString().toInt())
+            }
+            else {
+                petAdapter.reset()
+            }
             view.findNavController().navigate(R.id.action_homePage_to_petRecyclerFragment)
+        }
+
+        binding.findHomeButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_homePage_to_makeProfileFragment)
         }
 
         return binding.root

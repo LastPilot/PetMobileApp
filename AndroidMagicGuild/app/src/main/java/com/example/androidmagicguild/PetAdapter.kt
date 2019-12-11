@@ -1,9 +1,11 @@
 package com.example.androidmagicguild
+import android.net.Uri
 import android.widget.ImageView
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 
+val copy = mutableListOf<Pet?>()
 
 class PetAdapter {
 
@@ -12,18 +14,23 @@ class PetAdapter {
     private lateinit var databaseReference: DatabaseReference
     private val storage = FirebaseStorage.getInstance()
     private val storageRef = storage.reference
+    private var useCopy = false
 
 
-    private val array = mutableListOf<Pet?>()
+    private var array = mutableListOf<Pet?>()
 
-    fun add(pet: Pet?) {
+    fun add(pet: Pet?, imgUri: Uri) {
         databaseReference = database.reference
         var key = databaseReference.child("allPets").push().key
         var ref = databaseReference.child("allPets/$key")
         val childUpdates = mapOf("bio" to pet?.bio, "contact" to pet?.contact,
                                  "name" to pet?.name, "type" to pet?.type,
-                                 "zip" to pet?.zipCode)
+                                 "zip" to pet?.zip)
         ref.updateChildren(childUpdates)
+        array.add(pet)
+
+        val refStore = storageRef.child("${pet?.name}")
+        refStore.putFile(imgUri)
     }
 
     //This method will display an image of a pet inside a view. Requires a view and the name of the pet
@@ -54,14 +61,41 @@ class PetAdapter {
 
     }
 
+    fun sort() {
+        val sortedList = array.sortedWith(compareBy({it?.zip}))
+        array = sortedList.toMutableList()
+
+    }
+
+    fun sortBy(zip: Int?) {
+        copy.clear()
+        for(pet in array){
+            System.out.println(pet?.zip)
+            if(pet?.zip == zip) {
+                copy.add(pet)
+            }
+        }
+        if(copy.size > 0) {
+            useCopy = true
+        }
+        else{
+            useCopy = false
+        }
+    }
+
+    fun reset() {
+        useCopy = false
+    }
+
     //This will return the array of pets.
     fun returnArray(): MutableList<Pet?> {
-        return this.array
-
+        if(useCopy) return copy
+        return array
     }
 
     //this will return the size of the array
     fun arraySize(): Int {
+        if(useCopy) return copy.size
         return this.array.size
     }
 

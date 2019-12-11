@@ -1,11 +1,10 @@
 <resources>
-    <string name="app_name">AndroidMagicGuild</string>
     <string name="pet_name" />
     <string name="pet_picture_cd">Your pet\'s picture</string>
     <string name="bio_title">Bio</string>
     <string name="contact_info_title">Contact Info</string>
     <string name="bio_hint">Write your pet bio here...</string>
-  
+
     <string name="app_name">Pet-O-Files</string>
     <string name="logo" />
     <string name="enter_zip_code">Enter Zip Code</string>
