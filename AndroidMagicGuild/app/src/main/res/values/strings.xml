@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">AndroidMagicGuild</string>
     <string name="pet_name" />
     <string name="pet_picture_cd">Your pet\'s picture</string>
     <string name="bio_title">Bio</string>
@@ -14,5 +13,8 @@
     <string name="namePlaceHolder">Sir Barxalot</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="backHomeButton">Home</string>
-
+    <string name="backToRecView">Back</string>
+    <string name="adoptThatBoi">More Info</string>
+    <string name="contentResPet">image of pet</string>
+    <string name = "pettype">Pet Type</string>
 </resources>
