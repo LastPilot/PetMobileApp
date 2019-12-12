@@ -1,4 +1,4 @@
-# ![app icon](./.github/readme-images/app_icon.) PetMobile
+# PetMobile![app icon](./.github/readme-images/app_icon.) 
 
 ## Details
 Android Mobile Application where a user can put their pet up for adoption or adopt a pet. 
