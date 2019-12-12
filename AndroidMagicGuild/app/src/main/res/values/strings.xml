@@ -3,15 +3,24 @@
     <string name="pet_picture_cd">Your pet\'s picture</string>
     <string name="bio_title">Bio</string>
     <string name="contact_info_title">Contact Info</string>
-    <string name="bio_hint">Write your pet bio here...</string>
+
+    <string name="bio_hint">Write Your Pet Bio Here</string>
+
 
     <string name="app_name">Pet-O-Files</string>
     <string name="logo" />
+    <string name="backToRecView">Back</string>
     <string name="enter_zip_code">Enter Zip Code</string>
     <string name="adopt_page_button">Find a New Friend</string>
     <string name="offer_up_page">Put Up For Adoption</string>
     <string name="namePlaceHolder">Sir Barxalot</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="backHomeButton">Home</string>
+    <string name="adoptThatBoi">More Info</string>
+    <string name="contentResPet">image of pet</string>
+    <string name="contactThatBoi">Contact</string>
+    <string name="petContact">Write Your Contact Info Here</string>
+    <string name="type">Type</string>
+    <string name="petType">Write Your Pet Type Here</string>
 
 </resources>
