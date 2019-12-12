@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homePage_to_petRecyclerFragment"
             app:destination="@id/petRecyclerFragment" />
+        <action
+            android:id="@+id/action_homePage_to_makeProfileFragment"
+            app:destination="@id/makeProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/petRecyclerFragment"
@@ -21,6 +24,14 @@
         android:label="PetRecyclerFragment" >
         <action
             android:id="@+id/action_petRecyclerFragment_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/makeProfileFragment"
+        android:name="com.example.androidmagicguild.MakeProfileFragment"
+        android:label="MakeProfileFragment" >
+        <action
+            android:id="@+id/action_makeProfileFragment_to_homePage"
             app:destination="@id/homePage" />
     </fragment>
 </navigation>
