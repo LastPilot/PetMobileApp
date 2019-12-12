@@ -22,5 +22,11 @@
     <string name="petContact">Write Your Contact Info Here</string>
     <string name="type">Type</string>
     <string name="petType">Write Your Pet Type Here</string>
+    <string name="emaiHint">Email</string>
+    <string name="phoneHint">Phone Number</string>
+    <string name="zipHint">ZIP Code</string>
+    <string name="takePhotoHint">Take Photo</string>
+    <string name="petNameHint">Pet\'s Name</string>
+    <string name="submit">Submit</string>
 
 </resources>

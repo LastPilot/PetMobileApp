@@ -14,6 +14,7 @@ import android.provider.MediaStore
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Build
 import java.io.*
 import java.util.*
 
@@ -38,8 +39,18 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
         val adapt = ArrayAdapter(this.context!!,android.R.layout.simple_spinner_item,petTypes)
 
         adapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
         binding.petType.adapter = adapt
         binding.petType.setOnItemSelectedListener(this)
+
+        //SET AutoFIll to get rid of annoying warnings
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            binding.petNameEdit.setAutofillHints(View.AUTOFILL_HINT_NAME)
+            binding.ownerEmail.setAutofillHints(View.AUTOFILL_HINT_EMAIL_ADDRESS)
+            binding.ownerNumber.setAutofillHints(View.AUTOFILL_HINT_PHONE)
+            binding.ownerZip.setAutofillHints(View.AUTOFILL_HINT_POSTAL_CODE)
+        }
+
         binding.takePhoto.setOnClickListener{view: View ->
                 dispatchTakePictureIntent(1)
         }
@@ -89,12 +100,21 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
 
 
     private fun buttonCheck(view: View) {
-        var name = binding.petName.text.toString()
-        var bio = binding.editBio.text.toString()
-        var contactEmail = binding.emailEdit.text.toString()
-        var contactPhone = binding.phoneEdit.text.toString()
-        var contactZip = binding.zipEdit.text.toString().toInt()
-        val pet = Pet(name, pet_type, bio, contactEmail, contactZip)
+        var name = binding.petNameEdit.text.toString()
+        var bio = binding.petBioEdit.text.toString()
+
+        var contactInfo = "No Contact Info Entered"
+
+        if(!(binding.ownerEmail.text.toString().equals(""))){
+            contactInfo = "Email: " + binding.ownerEmail.text.toString()
+        }
+
+        if(!(binding.ownerNumber.text.toString().equals(""))){
+            contactInfo += "\nPhone#: " + binding.ownerNumber.text.toString()
+        }
+
+        var contactZip = binding.ownerZip.text.toString().toInt()
+        val pet = Pet(name, pet_type, bio, contactInfo, contactZip)
         petAdapter.add(pet, getImageFile(imgBitmap))
         view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
     }

@@ -18,7 +18,7 @@
             android:layout_marginBottom="5dp"
             android:contentDescription="@string/pet_picture_cd"
             app:layout_constraintBottom_toTopOf="@+id/take_Photo"
-            app:layout_constraintEnd_toStartOf="@+id/pet_name"
+            app:layout_constraintEnd_toStartOf="@+id/petNameEdit"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/pet_picture" />
@@ -30,44 +30,42 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="8dp"
-            android:text="Take Photo"
+            android:text="@string/takePhotoHint"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/bio_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pet_picture" />
 
         <EditText
-            android:id="@+id/pet_name"
+            android:id="@+id/petNameEdit"
             android:layout_width="123dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="46dp"
-            android:layout_marginTop="61dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="65dp"
+            android:importantForAutofill="yes"
             android:ems="10"
-            android:hint="@string/pet_name"
+            android:hint="@string/petNameHint"
             android:inputType="textPersonName"
-            android:text="@string/pet_name"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/pet_type"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/pet_picture"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
             android:id="@+id/pet_type"
-            android:layout_width="123dp"
+            android:layout_width="183dp"
             android:layout_height="48dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="65dp"
-            android:layout_marginBottom="77dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown"
-            app:layout_constraintBottom_toTopOf="@+id/edit_bio"
+            app:layout_constraintBottom_toTopOf="@+id/take_Photo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/pet_picture"
-            app:layout_constraintTop_toBottomOf="@+id/pet_name" />
+            app:layout_constraintTop_toBottomOf="@+id/petNameEdit"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/bio_title"
@@ -81,14 +79,14 @@
             android:fontFamily="@font/galada"
             android:text="@string/bio_title"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/edit_bio"
+            app:layout_constraintBottom_toTopOf="@+id/petBioEdit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/take_Photo" />
 
         <EditText
-            android:id="@+id/edit_bio"
+            android:id="@+id/petBioEdit"
             android:layout_width="339dp"
             android:layout_height="91dp"
             android:layout_marginStart="24dp"
@@ -98,7 +96,6 @@
             android:ems="10"
             android:hint="@string/bio_hint"
             android:inputType="textPersonName"
-            android:text="@string/bio_hint"
             app:layout_constraintBottom_toTopOf="@+id/contact_info_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,75 +110,75 @@
             android:layout_marginEnd="251dp"
             android:layout_marginBottom="8dp"
             android:text="@string/contact_info_title"
-            app:layout_constraintBottom_toTopOf="@+id/email_edit"
+            app:layout_constraintBottom_toTopOf="@+id/ownerEmail"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_bio" />
+            app:layout_constraintTop_toBottomOf="@+id/petBioEdit" />
 
         <EditText
-            android:id="@+id/email_edit"
+            android:id="@+id/ownerEmail"
             android:layout_width="294dp"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="93dp"
-            android:layout_marginBottom="8dp"
             android:ems="10"
+            android:hint="@string/emaiHint"
+            android:importantForAutofill="yes"
             android:inputType="textEmailAddress"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/phone_edit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contact_info_title" />
 
         <EditText
-            android:id="@+id/phone_edit"
+            android:id="@+id/ownerNumber"
             android:layout_width="294dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="93dp"
-            android:layout_marginBottom="16dp"
-            android:ems="10"
-            android:inputType="phone"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/zip_edit"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_edit" />
-
-        <EditText
-            android:id="@+id/zip_edit"
-            android:layout_width="294dp"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="93dp"
-            android:layout_marginBottom="16dp"
             android:ems="10"
+            android:hint="@string/phoneHint"
+            android:inputType="phone"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ownerEmail" />
+
+        <EditText
+            android:id="@+id/ownerZip"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="93dp"
+            android:ems="10"
+            android:hint="@string/zipHint"
+            android:importantForAutofill="yes"
             android:inputType="textPostalAddress"
             android:lineSpacingExtra="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/submit_bt"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone_edit" />
+            app:layout_constraintTop_toBottomOf="@+id/ownerNumber" />
 
         <Button
             android:id="@+id/submit_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="276dp"
-            android:layout_marginBottom="36dp"
-            android:text="Submit"
+            android:layout_marginBottom="16dp"
+            android:text="@string/submit"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/zip_edit" />
+            app:layout_constraintTop_toBottomOf="@+id/ownerZip" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
