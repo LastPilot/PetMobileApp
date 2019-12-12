@@ -11,4 +11,6 @@ Features include:
 * Contacting other users to inquire about their potential pet
 
 ## Reason
-We created this app to help pets find a new home. This app would help pet owners who can no longer keep a pet or even animal shelters. Since the occupancy in animal shelters has increased this app would be ideal for shelters to show off their animals to potential new homes. 
+We created this app to help pets find a new home. The occupancy in animal shelters has increased and this
+app would be ideal for shelters to show off their animals. 
+

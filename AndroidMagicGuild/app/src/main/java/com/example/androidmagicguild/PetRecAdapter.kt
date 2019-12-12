@@ -20,8 +20,26 @@ class PetRecAdapter : RecyclerView.Adapter<PetViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: PetViewHolder, position: Int) {
+
         var pet = petAdapter.returnArray()[position]
+
         holder.view.petNameTextView.text = pet?.name
+
+        holder.view.petBioTextView.text = pet?.bio
+
+        holder.view.petTypeView.text = pet?.type
+
+        holder.view.petContactTextView.text = pet?.contact
+
+        petAdapter.setImageOnView(pet?.name, holder.view.petImageView)
+
+
+        holder.view.adoptThatBoi.setOnClickListener {
+
+            holder.view.typeView.visibility = View.VISIBLE
+
+            holder.view.petTypeView.visibility = View.VISIBLE
+
         holder.view.petBioTextView.text = pet?.bio
         holder.view.petTypeView.text = pet?.type
         holder.view.petContactTextView.text = pet?.contact
@@ -50,6 +68,7 @@ class PetRecAdapter : RecyclerView.Adapter<PetViewHolder>() {
             holder.view.adoptThatBoi.visibility = View.VISIBLE
             notifyDataSetChanged()
         }
+
     }
 }
 

@@ -16,6 +16,7 @@
     <string name="namePlaceHolder">Sir Barxalot</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="backHomeButton">Home</string>
+    <string name = "pettype">Pet Type</string>
     <string name="adoptThatBoi">More Info</string>
     <string name="contentResPet">image of pet</string>
     <string name="contactThatBoi">Contact</string>
