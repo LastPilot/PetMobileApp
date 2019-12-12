@@ -20,9 +20,24 @@
             android:layout_marginEnd="130dp"
             android:contentDescription="@string/logo"
             android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginEnd="165dp"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toTopOf="@+id/editZipCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image"
+            app:layout_constraintVertical_bias="0.476"
+            app:bootstrapBrand="regular"/>
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/editZipCode"
@@ -53,7 +68,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="130dp"
             android:text="@string/adopt_page_button"
-            app:bootstrapBrand="secondary"
+            app:bootstrapBrand="primary"
             app:bootstrapSize="lg"
             app:buttonMode="regular"
             app:layout_constraintBottom_toTopOf="@+id/find_home_button"
@@ -72,7 +87,7 @@
             android:layout_marginEnd="130dp"
             android:layout_marginBottom="50dp"
             android:text="@string/offer_up_page"
-            app:bootstrapBrand="secondary"
+            app:bootstrapBrand="info"
             app:bootstrapSize="lg"
             app:buttonMode="regular"
             app:layout_constraintBottom_toBottomOf="parent"

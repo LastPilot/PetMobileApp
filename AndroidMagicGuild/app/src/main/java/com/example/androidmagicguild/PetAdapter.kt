@@ -74,11 +74,13 @@ class PetAdapter {
 
     fun sortBy(zip: Int?) {
         copy.clear()
+
         for(pet in array){
             if(pet?.zip == zip) {
                 copy.add(pet)
             }
         }
+
         if(copy.size > 0) {
             useCopy = true
         }
