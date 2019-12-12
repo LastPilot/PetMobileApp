@@ -100,23 +100,46 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
 
 
     private fun buttonCheck(view: View) {
-        val name = binding.petNameEdit.text.toString()
-        val bio = binding.petBioEdit.text.toString()
-
+        var readyForSubmission = true
+        var error = ""
+        var contactZip = 0
+        var name = ""
+        var bio = ""
         var contactInfo = "No Contact Info Entered"
 
-        if(!(binding.ownerEmail.text.toString().equals(""))){
-            contactInfo = "Email: " + binding.ownerEmail.text.toString()
+
+        if(binding.petNameEdit.text.toString().equals("") || binding.ownerZip.text.toString().equals("")){
+            readyForSubmission = false
+            //Inform user that name and zip is required
+            error =  "Name and ZipCode required"
+            binding.erroMessage.text = error
+        }
+        else{
+            name = binding.petNameEdit.text.toString()
+            contactZip = binding.ownerZip.text.toString().toInt()
         }
 
-        if(!(binding.ownerNumber.text.toString().equals(""))){
-            contactInfo += "\nPhone#: " + binding.ownerNumber.text.toString()
+        if(binding.ownerEmail.text.toString().equals("") && binding.ownerNumber.text.toString().equals("")){
+            readyForSubmission = false
+            //Inform user that either an email or phone is needed
+            error += "\nNeed Email/or Phone"
+            binding.erroMessage.text = error
+
+        }
+        else{
+            if(!(binding.ownerEmail.text.toString().equals(""))){
+                contactInfo = "Email: " + binding.ownerEmail.text.toString()
+            }
+            if(!(binding.ownerNumber.text.toString().equals(""))){
+                contactInfo += "\nPhone#: " + binding.ownerNumber.text.toString()
+            }
         }
 
-        val contactZip = binding.ownerZip.text.toString().toInt()
-        val pet = Pet(name, pet_type, bio, contactInfo, contactZip)
-        petAdapter.add(pet, getImageFile(imgBitmap))
-        view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
+        if(readyForSubmission){
+            val pet = Pet(name, pet_type, bio, contactInfo, contactZip)
+            petAdapter.add(pet, getImageFile(imgBitmap))
+            view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
+        }
     }
 
     override fun onItemSelected(arg0: AdapterView<*>, arg1: View, position: Int, id: Long) {
