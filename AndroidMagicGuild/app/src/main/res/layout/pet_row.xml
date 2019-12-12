@@ -6,6 +6,18 @@
     android:layout_height="wrap_content"
     android:background="@color/yellowPee">
 
+    <TextView
+        android:id="@+id/petTypeView"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/petType"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/typeView"
+        app:layout_constraintTop_toTopOf="@+id/typeView" />
+
     <ImageView
         android:id="@+id/petImageView"
         android:layout_width="185dp"
@@ -44,6 +56,7 @@
         android:text="@string/adoptThatBoi"
         android:textSize="18sp"
         android:visibility="visible"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/petNameTextView" />
@@ -90,10 +103,12 @@
         android:id="@+id/contactTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginStart="26dp"
         android:layout_marginTop="28dp"
         android:text="@string/contact_info_title"
         android:visibility="gone"
+        android:text="@string/contactThatBoi
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/petBioTextView" />
 
