@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         TypefaceProvider.registerDefaultIconSets();
         petAdapter.retrieveData()
+        petAdapter.sort()
         auth = FirebaseAuth.getInstance()
         auth.signInAnonymously()
         //petAdapter.add(Pet("newPet", "snake", "new pet", "3230", 53))
