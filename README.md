@@ -14,7 +14,3 @@ Features include:
 We created this app to help pets find a new home. The occupancy in animal shelters has increased and this
 app would be ideal for shelters to show off their animals. 
 
-
-
-
-
