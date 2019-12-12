@@ -6,6 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/yellowPee"
         tools:context=".PetRecyclerFragment">
 
 
@@ -23,9 +24,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerForPet"
-            android:layout_width="419dp"
-            android:layout_height="646dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

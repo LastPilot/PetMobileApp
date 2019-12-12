@@ -14,6 +14,7 @@ import android.provider.MediaStore
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Build
 import java.io.*
 import java.util.*
 
@@ -38,8 +39,18 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
         val adapt = ArrayAdapter(this.context!!,android.R.layout.simple_spinner_item,petTypes)
 
         adapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
         binding.petType.adapter = adapt
         binding.petType.setOnItemSelectedListener(this)
+
+        //SET AutoFIll to get rid of annoying warnings
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            binding.petNameEdit.setAutofillHints(View.AUTOFILL_HINT_NAME)
+            binding.ownerEmail.setAutofillHints(View.AUTOFILL_HINT_EMAIL_ADDRESS)
+            binding.ownerNumber.setAutofillHints(View.AUTOFILL_HINT_PHONE)
+            binding.ownerZip.setAutofillHints(View.AUTOFILL_HINT_POSTAL_CODE)
+        }
+
         binding.takePhoto.setOnClickListener{view: View ->
                 dispatchTakePictureIntent(1)
         }
@@ -89,14 +100,46 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
 
 
     private fun buttonCheck(view: View) {
-        var name = binding.petName.text.toString()
-        var bio = binding.editBio.text.toString()
-        var contactEmail = binding.emailEdit.text.toString()
-        var contactPhone = binding.phoneEdit.text.toString()
-        var contactZip = binding.zipEdit.text.toString().toInt()
-        val pet = Pet(name, pet_type, bio, contactEmail, contactZip)
-        petAdapter.add(pet, getImageFile(imgBitmap))
-        view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
+        var readyForSubmission = true
+        var error = ""
+        var contactZip = 0
+        var name = ""
+        var bio = ""
+        var contactInfo = "No Contact Info Entered"
+
+
+        if(binding.petNameEdit.text.toString().equals("") || binding.ownerZip.text.toString().equals("")){
+            readyForSubmission = false
+            //Inform user that name and zip is required
+            error =  "Name and ZipCode required"
+            binding.erroMessage.text = error
+        }
+        else{
+            name = binding.petNameEdit.text.toString()
+            contactZip = binding.ownerZip.text.toString().toInt()
+        }
+
+        if(binding.ownerEmail.text.toString().equals("") && binding.ownerNumber.text.toString().equals("")){
+            readyForSubmission = false
+            //Inform user that either an email or phone is needed
+            error += "\nNeed Email/or Phone"
+            binding.erroMessage.text = error
+
+        }
+        else{
+            if(!(binding.ownerEmail.text.toString().equals(""))){
+                contactInfo = "Email: " + binding.ownerEmail.text.toString()
+            }
+            if(!(binding.ownerNumber.text.toString().equals(""))){
+                contactInfo += "\nPhone#: " + binding.ownerNumber.text.toString()
+            }
+        }
+
+        if(readyForSubmission){
+            val pet = Pet(name, pet_type, bio, contactInfo, contactZip)
+            petAdapter.add(pet, getImageFile(imgBitmap))
+            view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
+        }
     }
 
     override fun onItemSelected(arg0: AdapterView<*>, arg1: View, position: Int, id: Long) {
