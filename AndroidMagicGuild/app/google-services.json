@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "618396160211",
+    "firebase_url": "https://petsagm.firebaseio.com",
+    "project_id": "petsagm",
+    "storage_bucket": "petsagm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618396160211:android:f4bf9e53db0d4c34984426",
+        "android_client_info": {
+          "package_name": "com.example.androidmagicguild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618396160211-ioco0j3pgvklso5tcfo6jhr89ccmj662.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApSsA41DJxFJYQvRSBVwc6DgH_k4kCgrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618396160211-ioco0j3pgvklso5tcfo6jhr89ccmj662.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
