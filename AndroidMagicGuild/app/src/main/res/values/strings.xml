@@ -4,6 +4,7 @@
     <string name="bio_title">Bio</string>
 
     <string name="bio_hint">Write Your Pet Bio Here</string>
+    <string name="contact_info_title">Contact Info</string>
 
 
     <string name="app_name">Pet-O-Files</string>
