@@ -2,7 +2,6 @@
     <string name="pet_name" />
     <string name="pet_picture_cd">Your pet\'s picture</string>
     <string name="bio_title">Bio</string>
-    <string name="contact_info_title">Contact Info</string>
 
     <string name="bio_hint">Write Your Pet Bio Here</string>
 
@@ -19,9 +18,10 @@
     <string name = "pettype">Pet Type</string>
     <string name="adoptThatBoi">More Info</string>
     <string name="contentResPet">image of pet</string>
+
     <string name="contactThatBoi">Contact</string>
     <string name="petContact">Write Your Contact Info Here</string>
     <string name="type">Type</string>
-    <string name="petType">Write Your Pet Type Here</string>
+
 
 </resources>
