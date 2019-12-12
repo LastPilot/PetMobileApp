@@ -100,8 +100,8 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
 
 
     private fun buttonCheck(view: View) {
-        var name = binding.petNameEdit.text.toString()
-        var bio = binding.petBioEdit.text.toString()
+        val name = binding.petNameEdit.text.toString()
+        val bio = binding.petBioEdit.text.toString()
 
         var contactInfo = "No Contact Info Entered"
 
@@ -113,7 +113,7 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
             contactInfo += "\nPhone#: " + binding.ownerNumber.text.toString()
         }
 
-        var contactZip = binding.ownerZip.text.toString().toInt()
+        val contactZip = binding.ownerZip.text.toString().toInt()
         val pet = Pet(name, pet_type, bio, contactInfo, contactZip)
         petAdapter.add(pet, getImageFile(imgBitmap))
         view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
