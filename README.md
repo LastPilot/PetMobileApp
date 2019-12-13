@@ -1,5 +1,12 @@
 # Pet-O-Files![app icon](./.github/readme-images/app_logo.png) 
 
+## Contributors
+
+Kristen Marenco 
+Roman Arias 
+Luis Gonzalez
+Cristian Corrales
+
 ## Details
 Android Mobile Application where a user can put their pet up for adoption or adopt a pet. 
 
