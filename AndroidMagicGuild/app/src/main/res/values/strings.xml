@@ -31,6 +31,7 @@
     <string name="takePhotoHint">Take Photo</string>
     <string name="petNameHint">Pet\'s Name</string>
     <string name="submit">Submit</string>
+    <string name="contactInfoBio">Contact Info Displayed Here</string>
 
 
 </resources>

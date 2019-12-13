@@ -1,4 +1,4 @@
-# PetMobile![app icon](./.github/readme-images/app_logo.png) 
+# Pet-O-Files![app icon](./.github/readme-images/app_logo.png) 
 
 ## Details
 Android Mobile Application where a user can put their pet up for adoption or adopt a pet. 
@@ -62,3 +62,5 @@ To hide the Pet Bio and Contact information a user may tap Back.
 A user may tap the Home button at any time to return to the Home page.
 
 ## Challenges
+* **Recycler View**
+  - One of our many challenges trying to complete this app was trying to get the Recycler view to show our items. We also wanted to make the recycler view clickable, when a click occurred the data of the pet would open on a new fragment to reveal all the pet's info. After around ten attempts spanning three days, we were successful at not making the recycler view do what we originally planned. At       this point we decided to turn this into a feature! Who has time to select and item wait microseconds for a new fragment to display when you can just refresh the fragment you already have! We then decided to implement expandable and collapsible recycler view items the only way we knew how to by using visibility.

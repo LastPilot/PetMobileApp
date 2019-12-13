@@ -1,139 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/petImageView"
-            android:layout_width="218dp"
-            android:layout_height="225dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="114dp"
+            android:layout_width="346dp"
+            android:layout_height="244dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="4dp"
             android:contentDescription="@string/contentResPet"
             android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/petNameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars[2]" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/petNameTextView"
-            android:layout_width="185dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="101dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginEnd="113dp"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="50dp"
             android:gravity="center"
             android:text="@string/namePlaceHolder"
             android:textColor="@android:color/black"
             android:textSize="30sp"
-            app:bootstrapBrand="regular" />
+            app:bootstrapBrand="regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petImageView" />
 
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/adoptThatBoi"
             android:layout_width="137dp"
             android:layout_height="50dp"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="143dp"
+            android:layout_marginTop="4dp"
             android:text="@string/adoptThatBoi"
             android:textSize="18sp"
             android:visibility="visible"
             app:bootstrapBrand="primary"
             app:bootstrapSize="lg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petNameTextView"
             app:roundedCorners="true"
             app:showOutline="false" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/bioTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="28dp"
-            android:textSize="14sp"
-            app:bootstrapText="@string/bio_title"
+            android:layout_width="47dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:visibility="gone"
             app:bootstrapBrand="regular"
-            />
+            app:bootstrapText="@string/bio_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backCollapse" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/petBioTextView"
-            android:layout_width="299dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/profile_background"
             android:text="@string/bio_hint"
+            android:textSize="18sp"
             android:visibility="gone"
             app:bootstrapBrand="regular"
-            android:textSize="14sp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bioTextView"
+            app:layout_constraintTop_toTopOf="@+id/bioTextView" />
 
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/backCollapse"
-            android:layout_width="88dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="143dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="143dp"
+            android:layout_width="131dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/backToRecView"
             android:visibility="gone"
-            app:bootstrapText="@string/backToRecView"
-            app:bootstrapSize="sm"
-            app:bootstrapBrand="regular"
-            />
-
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petNameTextView" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
-            android:id="@+id/typeView"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
-            android:textSize="14sp"
-            android:text="@string/pettype"
+            android:id="@+id/petContactTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/profile_background"
+            android:text="@string/contactInfoBio"
+            android:textSize="18sp"
             android:visibility="gone"
-            app:bootstrapBrand="regular" />
+            app:bootstrapBrand="regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/contactTextView"
+            app:layout_constraintTop_toTopOf="@+id/contactTextView" />
+
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/contactTextView"
             android:layout_width="93dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="14dp"
-            android:textSize="14sp"
+            android:layout_marginTop="16dp"
             android:text="@string/contactThatBoi"
             android:visibility="gone"
-            app:bootstrapBrand="regular" />
-
-        <com.beardedhen.androidbootstrap.AwesomeTextView
-            android:id="@+id/petContactTextView"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="52dp"
-            android:background="@drawable/profile_background"
-            android:text="TextView"
-            android:textSize="14sp"
-            android:visibility="gone"
             app:bootstrapBrand="regular"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petBioTextView" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/petTypeView"
-            android:layout_width="89dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="160dp"
-            android:layout_marginBottom="200dp"
-            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/profile_background"
+            android:text="@string/pettype"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:bootstrapBrand="regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typeView"
+            app:layout_constraintTop_toTopOf="@+id/typeView" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/typeView"
+            android:layout_width="59dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="@string/type"
             android:visibility="gone"
-            app:bootstrapBrand="regular" />
-    </LinearLayout>
+            app:bootstrapBrand="regular"
+            app:layout_constraintEnd_toStartOf="@+id/petTypeView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/petContactTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
