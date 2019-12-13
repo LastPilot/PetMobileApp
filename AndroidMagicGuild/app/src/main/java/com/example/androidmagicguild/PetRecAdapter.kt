@@ -22,32 +22,16 @@ class PetRecAdapter : RecyclerView.Adapter<PetRecAdapter.PetViewHolder>() {
     override fun onBindViewHolder(holder: PetViewHolder, position: Int) {
 
         var pet = petAdapter.returnArray()[position]
-
         holder.view.petNameTextView.text = pet?.name
-
-        holder.view.petBioTextView.text = pet?.bio
-
-        holder.view.petTypeView.text = pet?.type
-
-        holder.view.petContactTextView.text = pet?.contact
-
-        petAdapter.setImageOnView(pet?.name, holder.view.petImageView)
-
-
-        holder.view.adoptThatBoi.setOnClickListener {
-
-            holder.view.typeView.visibility = View.VISIBLE
-
-            holder.view.petTypeView.visibility = View.VISIBLE
-
         holder.view.petBioTextView.text = pet?.bio
         holder.view.petTypeView.text = pet?.type
         holder.view.petContactTextView.text = pet?.contact
         petAdapter.setImageOnView(pet?.name, holder.view.petImageView)
 
+
         holder.view.adoptThatBoi.setOnClickListener {
-            holder.view.typeView.visibility = View.VISIBLE
             holder.view.petTypeView.visibility = View.VISIBLE
+            holder.view.typeView.visibility = View.VISIBLE
             holder.view.bioTextView.visibility = View.VISIBLE
             holder.view.petBioTextView.visibility = View.VISIBLE
             holder.view.contactTextView.visibility = View.VISIBLE
@@ -58,8 +42,8 @@ class PetRecAdapter : RecyclerView.Adapter<PetRecAdapter.PetViewHolder>() {
 
         }
         holder.view.backCollapse.setOnClickListener {
-            holder.view.typeView.visibility = View.GONE
             holder.view.petTypeView.visibility = View.GONE
+            holder.view.typeView.visibility = View.GONE
             holder.view.bioTextView.visibility = View.GONE
             holder.view.petBioTextView.visibility = View.GONE
             holder.view.contactTextView.visibility = View.GONE
@@ -69,9 +53,10 @@ class PetRecAdapter : RecyclerView.Adapter<PetRecAdapter.PetViewHolder>() {
             notifyDataSetChanged()
         }
 
+
+    }
+
+    class PetViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+
     }
 }
-
-class PetViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-
-}}
