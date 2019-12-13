@@ -83,3 +83,7 @@ we just took and uploading it to firebase. We had to learn about internal and ex
 to save the image into a file. Once we had the file, we got the file's Uri to use for firebase upload but for
 some odd reason the Uri retirved from the file did not work. After days of researching, we found it easier to
 just stream the file onto firebase instead of trying to retrieve it's Uri.
+
+## Demo Video
+[![Demo Video for Pet-O-Files](https://img.youtube.com/vi/jtZV9_SRs7U/maxresdefault.jpg)](https://youtu.be/jtZV9_SRs7U)
+
