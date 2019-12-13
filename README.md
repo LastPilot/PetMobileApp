@@ -16,15 +16,15 @@ app would be ideal for shelters to show off their animals.
 
 ## Home Page
 
-Here a user may enter their zipcode and tap Adopt to find animals for adoption in their area.
+Here a user may enter their zipcode and tap the Adopt button to find animals for adoption in their area.
 
-A user may also tap Re-Home to create a profile for their pet to be adopted.
+A user may also tap the Re-Home button to create a profile for their pet to be adopted.
 
 ![home page](./.github/readme-images/home_page.jpg)
 
 ## Profile
 
-Here a user may take a photo of their animal by tapping Take Photo.
+Here a user may take a photo of their animal by tapping the Take Photo button.
 
 A user may:
 * Enter their Pet's Name
@@ -33,10 +33,32 @@ A user may:
 * Enter their Phone Number
 * Enter their ZIPCode
 
-If a user fails to enter a Pet Name and ZIPCode this will result in an error.
-
 ![make profile](./.github/readme-images/make_profile.jpg)
 
-Once a user taps submit they will be prompted back to the Home Page.
+If a user fails to enter a Pet Name and ZIPCode this will result in an error.
 
 ![make profile error](./.github/readme-images/make_profile_error.jpg)
+
+Once a user taps the Submit button they will be prompted back to the Home Page.
+
+## Pet Adoption
+
+To adopt a pet a user enters their ZIPCode and taps the Adopt button from the Home Page.
+
+The Pet Adoption page then displays all pets that are up for adoption in that area. 
+
+![Pet Adoption Page](./.github/readme-images/petrecycler.jpg)
+
+To see the Pet Type the user may tap More Info button
+
+![Pet Adoption Displays Pet Type](./.github/readme-images/pet_recycler_tap1.jpg)
+
+To see the Pet's Bio and Contact information of the owner a user may tap the More Info button.
+
+![Pet Adoption Displays Pet Bio and Contact](./.github/readme-images/pet_recycler_tap2.jpg)
+
+To hide the Pet Bio and Contact information a user may tap Back.
+
+A user may tap the Home button at any time to return to the Home page.
+
+## Challenges
