@@ -10,24 +10,29 @@
         tools:context=".PetRecyclerFragment">
 
 
-        <Button
+        <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/backToHomeButoon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="162dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="162dp"
-            android:text="@string/backHomeButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:bootstrapText="@string/backHomeButton"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="md"
+            app:buttonMode="regular"
+            app:showOutline="false"
+            app:roundedCorners="true"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerForPet"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="32dp"
-            android:maxHeight="500dp"
+            android:maxHeight="700dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
