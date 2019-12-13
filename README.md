@@ -1,4 +1,4 @@
-# PetMobile![app icon](./.github/readme-images/app_logo.png) 
+# Pet-O-Files![app icon](./.github/readme-images/app_logo.png) 
 
 ## Details
 Android Mobile Application where a user can put their pet up for adoption or adopt a pet. 
@@ -40,3 +40,10 @@ If a user fails to enter a Pet Name and ZIPCode this will result in an error.
 Once a user taps submit they will be prompted back to the Home Page.
 
 ![make profile error](./.github/readme-images/make_profile_error.jpg)
+
+## Challenges
+
+* **RecyclerView
+
+* **Firebase
+
