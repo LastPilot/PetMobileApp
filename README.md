@@ -20,7 +20,7 @@ Here a user may enter their zipcode and tap the Adopt button to find animals for
 
 A user may also tap the Re-Home button to create a profile for their pet to be adopted.
 
-![home page](./.github/readme-images/home_page.jpg)
+![home page](./.github/readme-images/home_page_ui.jpg)
 
 ## Profile
 
@@ -33,11 +33,11 @@ A user may:
 * Enter their Phone Number
 * Enter their ZIPCode
 
-![make profile](./.github/readme-images/make_profile.jpg)
+![Make Profile](./.github/readme-images/make_profile_ui.jpg)
 
 If a user fails to enter a Pet Name, Image, valid ZIP Code, or At least one contact detail this will result in an error.
 
-![make profile error](./.github/readme-images/make_profile_error.jpg)
+![Make Profile Error](./.github/readme-images/make_profile_error_ui.jpg)
 
 Once a user taps the Submit button they will be prompted back to the Home Page.
 
@@ -47,11 +47,11 @@ To adopt a pet a user enters their ZIPCode and taps the Adopt button from the Ho
 
 The Pet Adoption page then displays all pets that are up for adoption in that area. 
 
-![Pet Adoption Page](./.github/readme-images/petrecycler.jpg)
+![Pet Adoption Page](./.github/readme-images/pet_recycler_ui.jpg)
 
 To see the Owner's Contact Information as well as the Pet's Type and Bio the user may tap the More Info button
 
-![Pet Adoption Displays Pet Bio and Contact](./.github/readme-images/pet_recycler_tap2.jpg)
+![Pet Adoption Displays Pet Bio, Contact and Type](./.github/readme-images/pet_info_ui.jpg)
 
 To hide the Pet Bio, Type and Contact Information a user may tap Back.
 
