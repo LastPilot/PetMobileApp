@@ -20,7 +20,7 @@ Here a user may enter their zipcode and tap Adopt to find animals for adoption i
 
 A user may also tap Re-Home to create a profile for their pet to be adopted.
 
-(./.github/readme-images/home_page.jpg)
+![home page](./.github/readme-images/home_page.jpg)
 
 ## Profile
 
@@ -35,8 +35,8 @@ A user may:
 
 If a user fails to enter a Pet Name and ZIPCode this will result in an error.
 
-(./.github/readme-images/make_profile.jpg)
+![make profile](./.github/readme-images/make_profile.jpg)
 
 Once a user taps submit they will be prompted back to the Home Page.
 
-(./.github/readme-images/make_profile_error.jpg)
+![make profile error](./.github/readme-images/make_profile_error.jpg)
