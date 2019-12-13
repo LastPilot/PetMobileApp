@@ -46,12 +46,13 @@ class PetRecAdapter : RecyclerView.Adapter<PetRecAdapter.PetViewHolder>() {
         petAdapter.setImageOnView(pet?.name, holder.view.petImageView)
 
         holder.view.adoptThatBoi.setOnClickListener {
-            holder.view.typeView.visibility = View.VISIBLE
-            holder.view.petTypeView.visibility = View.VISIBLE
+            holder.view.typeView.visibility = View.GONE
+            holder.view.petTypeView.visibility = View.GONE
             holder.view.bioTextView.visibility = View.VISIBLE
             holder.view.petBioTextView.visibility = View.VISIBLE
-            holder.view.contactTextView.visibility = View.VISIBLE
             holder.view.petContactTextView.visibility = View.VISIBLE
+            holder.view.contactTextView.visibility = View.VISIBLE
+
             holder.view.adoptThatBoi.visibility = View.GONE
             holder.view.backCollapse.visibility = View.VISIBLE
             notifyDataSetChanged()
