@@ -6,6 +6,21 @@
     android:layout_height="wrap_content"
     android:background="@color/yellowPee">
 
+<<<<<<< HEAD
+=======
+    <TextView
+        android:id="@+id/petTypeView"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/petType"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/typeView"
+        app:layout_constraintTop_toTopOf="@+id/typeView" />
+
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
     <ImageView
         android:id="@+id/petImageView"
         android:layout_width="185dp"
@@ -14,7 +29,10 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="114dp"
         android:contentDescription="@string/contentResPet"
+<<<<<<< HEAD
         android:visibility="visible"
+=======
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -92,9 +110,19 @@
         android:id="@+id/contactTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="@string/contactThatBoi"
         app:layout_constraintStart_toStartOf="parent"
         android:visibility="visible"
+=======
+
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/contact_info_title"
+        android:visibility="gone"
+        android:text="@string/contactThatBoi
+        app:layout_constraintStart_toStartOf="parent"
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
         app:layout_constraintTop_toBottomOf="@+id/petBioTextView" />
 
     <TextView
@@ -123,17 +151,25 @@
 
     <TextView
         android:id="@+id/petTypeView"
+<<<<<<< HEAD
 
         android:text="@string/type"
 
 
+=======
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
         android:layout_width="wrap_content"
         android:layout_height="46dp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="160dp"
         android:background="@drawable/profile_background"
+<<<<<<< HEAD
 
         android:visibility="visible"
+=======
+        android:text="TextView"
+        android:visibility="gone"
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/typeView"
         app:layout_constraintTop_toTopOf="@+id/typeView" />

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="151dp"
+            android:layout_height="165dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="130dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editZipCode"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="105dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="@string/enter_zip_code"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+
+        <Button
+            android:id="@+id/adopt_page_button"
+            android:layout_width="166dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="130dp"
+            android:text="@string/adopt_page_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editZipCode" />
+
+        <Button
+            android:id="@+id/find_home_button"
+            android:layout_width="169dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="133dp"
+            android:text="@string/offer_up_page"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adopt_page_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
