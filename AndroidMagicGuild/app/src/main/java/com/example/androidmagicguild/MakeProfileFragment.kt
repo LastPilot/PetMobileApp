@@ -16,10 +16,11 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import java.io.*
+import java.lang.NumberFormatException
 import java.util.*
 
 
-class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
+class MakeProfileFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var pet_type: String = "Dog"
     private lateinit var imgBitmap: Bitmap
     private var imgUri: Uri? = null
@@ -36,7 +37,7 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.make_profile, container, false)
 
-        val adapt = ArrayAdapter(this.context!!,android.R.layout.simple_spinner_item,petTypes)
+        val adapt = ArrayAdapter(this.context!!, android.R.layout.simple_spinner_item, petTypes)
 
         adapt.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
@@ -51,8 +52,8 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
             binding.ownerZip.setAutofillHints(View.AUTOFILL_HINT_POSTAL_CODE)
         }
 
-        binding.takePhoto.setOnClickListener{view: View ->
-                dispatchTakePictureIntent(1)
+        binding.takePhoto.setOnClickListener { view: View ->
+            dispatchTakePictureIntent(1)
         }
         binding.submitBt.setOnClickListener { view: View ->
             buttonCheck(view)
@@ -78,19 +79,20 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
         binding.petPicture.setImageBitmap(imgBitmap)
 
     }
-    // Method to save an bitmap to a file
-    private fun getImageFile(bitmap:Bitmap): File {
-        // Initialize a new file instance to save bitmap object
-        var file = context?.getDir("Images",Context.MODE_PRIVATE)
-        file = File(file,"${UUID.randomUUID()}.jpg")
 
-        try{
+    // Method to save an bitmap to a file
+    private fun getImageFile(bitmap: Bitmap): File {
+        // Initialize a new file instance to save bitmap object
+        var file = context?.getDir("Images", Context.MODE_PRIVATE)
+        file = File(file, "${UUID.randomUUID()}.jpg")
+
+        try {
             // Compress the bitmap and save in jpg format
-            val stream:OutputStream = FileOutputStream(file)
-            bitmap.compress(Bitmap.CompressFormat.JPEG,100,stream)
+            val stream: OutputStream = FileOutputStream(file)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
             stream.flush()
             stream.close()
-        }catch (e:IOException){
+        } catch (e: IOException) {
             e.printStackTrace()
         }
 
@@ -101,41 +103,60 @@ class MakeProfileFragment: Fragment(), AdapterView.OnItemSelectedListener {
 
     private fun buttonCheck(view: View) {
         var readyForSubmission = true
+        var numeric = true
         var error = ""
         var contactZip = 0
-        var name = ""
-        var bio = ""
-        var contactInfo = "No Contact Info Entered"
+        var name = binding.petNameEdit.text.toString()
+        var bio = binding.petBioEdit.text.toString()
+        var contactEmail = binding.ownerEmail.text.toString()
+        var contactPhone = binding.ownerNumber.text.toString()
+        var contactInfo = ""
 
 
-        if(binding.petNameEdit.text.toString().equals("") || binding.ownerZip.text.toString().equals("")){
+        //Name and Picture validation
+        if (name == "" || binding.petPicture.drawable == null) {
             readyForSubmission = false
             //Inform user that name and zip is required
-            error =  "Name and ZipCode required"
+            error = "No Name and/or Image"
             binding.erroMessage.text = error
         }
-        else{
-            name = binding.petNameEdit.text.toString()
-            contactZip = binding.ownerZip.text.toString().toInt()
-        }
 
-        if(binding.ownerEmail.text.toString().equals("") && binding.ownerNumber.text.toString().equals("")){
+        //Email and Phone validation
+        if (contactEmail == "" && contactPhone == "") {
             readyForSubmission = false
             //Inform user that either an email or phone is needed
             error += "\nNeed Email/or Phone"
             binding.erroMessage.text = error
 
-        }
-        else{
-            if(!(binding.ownerEmail.text.toString().equals(""))){
-                contactInfo = "Email: " + binding.ownerEmail.text.toString()
+        } else {
+            if (contactEmail != "") {
+                contactInfo = "Email: $contactEmail"
             }
-            if(!(binding.ownerNumber.text.toString().equals(""))){
-                contactInfo += "\nPhone#: " + binding.ownerNumber.text.toString()
+            if (contactPhone != "") {
+                contactInfo += "\nPhone#: $contactPhone"
             }
         }
 
-        if(readyForSubmission){
+        //ZIP Code Validation
+        try {
+            contactZip = binding.ownerZip.text.toString().toInt()
+        } catch (e: NumberFormatException) {
+            numeric = false
+        }
+
+        if ((!numeric) || binding.ownerZip.text.toString().length != 5) {
+            readyForSubmission = false
+            //Inform user of improper zip code
+            error += "\nImproper ZIP Code"
+            binding.erroMessage.text = error
+        }
+
+        //Bio Validation
+        if (bio == "") {
+            bio = "No Bio Info Entered"
+        }
+
+        if (readyForSubmission) {
             val pet = Pet(name, pet_type, bio, contactInfo, contactZip)
             petAdapter.add(pet, getImageFile(imgBitmap))
             view.findNavController().navigate(R.id.action_makeProfileFragment_to_homePage)
