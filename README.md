@@ -45,7 +45,7 @@ Once a user taps submit they will be prompted back to the Home Page.
 
 * **RecyclerView**
 
-One of our many challenges tryin to comeplet this app was trying to get the Recyclerview to show our items. We also wanted to make the recyclerview clickable, when a click occurred the data of the pet would open up on a new fragment to reveal all the pet's info. After around ten attempts spanning three days we were successful at not making the recyclerview do what we originally planned. At this point we decided to turn this into a feature! Who has time to select and item wait microseconds for a new fragment to display when you can just refresh the fragment you already have! We then decided to implement expandable and collapseable recyclerview items the only way we knew how to.
+  - One of our many challenges trying to complete this app was trying to get the Recycler view to show our items. We also wanted to make the recycler view clickable, when a click occurred the data of the pet would open on a new fragment to reveal all the pet's info. After around ten attempts spanning three days, we were successful at not making the recycler view do what we originally planned. At       this point we decided to turn this into a feature! Who has time to select and item wait microseconds for a new fragment to display when you can just refresh the fragment you already have! We then decided to implement expandable and collapsible recycler view items the only way we knew how to by using visibility.
 
 * **Firebase**
 
