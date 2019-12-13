@@ -20,51 +20,83 @@
             android:layout_marginEnd="130dp"
             android:contentDescription="@string/logo"
             android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginEnd="165dp"
+            android:text="@string/app_name"
+            app:layout_constraintBottom_toTopOf="@+id/editZipCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image"
+            app:layout_constraintVertical_bias="0.476"
+            app:bootstrapBrand="regular"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/editZipCode"
-            android:layout_width="0dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="105dp"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="22dp"
-            android:layout_marginEnd="105dp"
+            android:layout_marginEnd="130dp"
             android:background="@drawable/border"
             android:ems="10"
             android:hint="@string/enter_zip_code"
             android:inputType="number"
             android:maxLength="5"
             android:textColorHint="#000000"
+            app:bootstrapBrand="info"
+            app:bootstrapSize="lg"
+            app:layout_constraintBottom_toTopOf="@+id/adopt_page_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+            app:layout_constraintTop_toBottomOf="@+id/logo_image"
+            app:showOutline="true" />
 
-        <Button
+        <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/adopt_page_button"
-            android:layout_width="166dp"
-            android:layout_height="68dp"
+            android:layout_width="142dp"
+            android:layout_height="48dp"
             android:layout_marginStart="130dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="130dp"
             android:text="@string/adopt_page_button"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:layout_constraintBottom_toTopOf="@+id/find_home_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editZipCode"
+            app:roundedCorners="true"
+            app:showOutline="false" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/find_home_button"
+            android:layout_width="142dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginEnd="130dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/offer_up_page"
+            app:bootstrapBrand="info"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.545"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editZipCode" />
-
-        <Button
-            android:id="@+id/find_home_button"
-            android:layout_width="169dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="133dp"
-            android:text="@string/offer_up_page"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/adopt_page_button" />
+            app:layout_constraintTop_toBottomOf="@+id/adopt_page_button"
+            app:roundedCorners="true"
+            app:showOutline="false" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
