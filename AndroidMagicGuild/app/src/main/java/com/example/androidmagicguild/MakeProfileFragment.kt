@@ -25,7 +25,7 @@ class MakeProfileFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private lateinit var imgBitmap: Bitmap
     private var imgUri: Uri? = null
 
-    val petTypes = arrayOf("Dog", "Cat", "Bird", "Reptile", "Other")
+    val petTypes = arrayOf("Dog", "Cat", "Bird", "Rabbit", "Hamster", "Lizard", "Snake", "Turtle", "Other")
 
     lateinit var binding: MakeProfileBinding
 
@@ -165,10 +165,15 @@ class MakeProfileFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(arg0: AdapterView<*>, arg1: View, position: Int, id: Long) {
         when (position) {
+            //"Dog", "Cat", "Bird", "Rabbit", "Hamster", "Lizard", "Snake", "Turtle", "Other"
             0 -> pet_type = "Dog"
             1 -> pet_type = "Cat"
             2 -> pet_type = "Bird"
-            3 -> pet_type = "Reptile"
+            3 -> pet_type = "Rabbit"
+            4 -> pet_type = "Hamster"
+            5 -> pet_type = "Lizard"
+            6 -> pet_type = "Snake"
+            7 -> pet_type = "Turtle"
             else -> {
                 pet_type = "Other"
             }
