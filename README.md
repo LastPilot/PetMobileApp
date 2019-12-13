@@ -49,11 +49,7 @@ The Pet Adoption page then displays all pets that are up for adoption in that ar
 
 ![Pet Adoption Page](./.github/readme-images/petrecycler.jpg)
 
-To see the Pet Type the user may tap More Info button
-
-![Pet Adoption Displays Pet Type](./.github/readme-images/pet_recycler_tap1.jpg)
-
-To see the Pet's Bio and Contact information of the owner a user may tap the More Info button.
+To see the Pet's Contact Information fo the owner as well as the Pet's Type and Bio the user may tap More Info button
 
 ![Pet Adoption Displays Pet Bio and Contact](./.github/readme-images/pet_recycler_tap2.jpg)
 
