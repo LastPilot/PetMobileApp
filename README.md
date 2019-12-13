@@ -60,3 +60,6 @@ A user may tap the Home button at any time to return to the Home page.
 ## Challenges
 * **Recycler View**
   - One of our many challenges trying to complete this app was trying to get the Recycler view to show our items. We also wanted to make the recycler view clickable, when a click occurred the data of the pet would open on a new fragment to reveal all the pet's info. After around ten attempts spanning three days, we were successful at not making the recycler view do what we originally planned. At       this point we decided to turn this into a feature! Who has time to select and item wait microseconds for a new fragment to display when you can just refresh the fragment you already have! We then decided to implement expandable and collapsible recycler view items the only way we knew how to by using visibility.
+
+## Demo Video
+[![Demo Video for Pet-O-Files](https://img.youtube.com/vi/jtZV9_SRs7U/maxresdefault.jpg)](https://youtu.be/jtZV9_SRs7U)
