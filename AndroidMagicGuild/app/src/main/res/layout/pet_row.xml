@@ -1,4 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/petImageView"
+            android:layout_width="218dp"
+            android:layout_height="225dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="114dp"
+            android:contentDescription="@string/contentResPet"
+            android:visibility="visible"
+            tools:srcCompat="@tools:sample/avatars[2]" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/petNameTextView"
+            android:layout_width="185dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="101dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="113dp"
+            android:gravity="center"
+            android:text="@string/namePlaceHolder"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            app:bootstrapBrand="regular" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/adoptThatBoi"
+            android:layout_width="137dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="143dp"
+            android:text="@string/adoptThatBoi"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:roundedCorners="true"
+            app:showOutline="false" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/bioTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="28dp"
+            app:bootstrapText="@string/bio_title"
+            android:visibility="gone"
+            app:bootstrapBrand="regular"
+            />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/petBioTextView"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/profile_background"
+            android:text="@string/bio_hint"
+            android:visibility="gone"
+            app:bootstrapBrand="regular" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/backCollapse"
+            android:layout_width="88dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="143dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="143dp"
+            android:text="@string/backToRecView"
+            android:visibility="gone" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/petContactTextView"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="52dp"
+            android:background="@drawable/profile_background"
+            android:text="TextView"
+            android:visibility="gone"
+            app:bootstrapBrand="regular" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/typeView"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/pettype"
+            android:visibility="gone"
+            app:bootstrapBrand="regular" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/contactTextView"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/contactThatBoi"
+            android:visibility="visible"
+            app:bootstrapBrand="regular" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/petTypeView"
+
+            android:layout_width="89dp"
+
+
+            android:layout_height="46dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginBottom="200dp"
+
+            android:background="@drawable/profile_background"
+            android:text="@string/type"
+            android:visibility="visible"
+            app:bootstrapBrand="regular" />
+    </LinearLayout>
+
+</layout>
+=======
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +138,9 @@
     android:layout_height="wrap_content"
     android:background="@color/yellowPee">
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     <TextView
         android:id="@+id/petTypeView"
         android:layout_width="239dp"
@@ -18,6 +153,9 @@
         app:layout_constraintStart_toEndOf="@+id/typeView"
         app:layout_constraintTop_toTopOf="@+id/typeView" />
 
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
+=======
+>>>>>>> kristen-dev
     <ImageView
         android:id="@+id/petImageView"
         android:layout_width="185dp"
@@ -26,6 +164,14 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="114dp"
         android:contentDescription="@string/contentResPet"
+<<<<<<< HEAD
+<<<<<<< HEAD
+        android:visibility="visible"
+=======
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
+=======
+        android:visibility="visible"
+>>>>>>> kristen-dev
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -103,6 +249,12 @@
         android:id="@+id/contactTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+<<<<<<< HEAD
+        android:text="@string/contactThatBoi"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"
+=======
 
         android:layout_marginStart="26dp"
         android:layout_marginTop="28dp"
@@ -110,6 +262,12 @@
         android:visibility="gone"
         android:text="@string/contactThatBoi
         app:layout_constraintStart_toStartOf="parent"
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
+=======
+        android:text="@string/contactThatBoi"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"
+>>>>>>> kristen-dev
         app:layout_constraintTop_toBottomOf="@+id/petBioTextView" />
 
     <TextView
@@ -138,14 +296,38 @@
 
     <TextView
         android:id="@+id/petTypeView"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kristen-dev
+
+        android:text="@string/type"
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
+=======
+>>>>>>> kristen-dev
         android:layout_width="wrap_content"
         android:layout_height="46dp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="160dp"
         android:background="@drawable/profile_background"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        android:visibility="visible"
+=======
         android:text="TextView"
         android:visibility="gone"
+>>>>>>> edc13498da261a01a62f9bd96044b10f45a250e8
+=======
+
+        android:visibility="visible"
+>>>>>>> kristen-dev
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/typeView"
         app:layout_constraintTop_toTopOf="@+id/typeView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> master

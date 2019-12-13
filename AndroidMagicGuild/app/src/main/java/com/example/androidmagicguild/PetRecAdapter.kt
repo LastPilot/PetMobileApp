@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.pet_row.view.*
 
-class PetRecAdapter : RecyclerView.Adapter<PetViewHolder>() {
+class PetRecAdapter : RecyclerView.Adapter<PetRecAdapter.PetViewHolder>() {
 
     //num of items
     override fun getItemCount(): Int {
@@ -74,4 +74,4 @@ class PetRecAdapter : RecyclerView.Adapter<PetViewHolder>() {
 
 class PetViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
-}
+}}
