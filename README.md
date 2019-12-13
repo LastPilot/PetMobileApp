@@ -35,7 +35,7 @@ A user may:
 
 ![make profile](./.github/readme-images/make_profile.jpg)
 
-If a user fails to enter a Pet Name and ZIPCode this will result in an error.
+If a user fails to enter a Pet Name, Image, valid ZIP Code, or At least one contact detail this will result in an error.
 
 ![make profile error](./.github/readme-images/make_profile_error.jpg)
 
@@ -49,15 +49,11 @@ The Pet Adoption page then displays all pets that are up for adoption in that ar
 
 ![Pet Adoption Page](./.github/readme-images/petrecycler.jpg)
 
-To see the Pet Type the user may tap More Info button
-
-![Pet Adoption Displays Pet Type](./.github/readme-images/pet_recycler_tap1.jpg)
-
-To see the Pet's Bio and Contact information of the owner a user may tap the More Info button.
+To see the Owner's Contact Information as well as the Pet's Type and Bio the user may tap the More Info button
 
 ![Pet Adoption Displays Pet Bio and Contact](./.github/readme-images/pet_recycler_tap2.jpg)
 
-To hide the Pet Bio and Contact information a user may tap Back.
+To hide the Pet Bio, Type and Contact Information a user may tap Back.
 
 A user may tap the Home button at any time to return to the Home page.
 
