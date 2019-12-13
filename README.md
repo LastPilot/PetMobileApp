@@ -35,7 +35,7 @@ A user may:
 
 ![make profile](./.github/readme-images/make_profile.jpg)
 
-If a user fails to enter a Pet Name and ZIPCode this will result in an error.
+If a user fails to enter a Pet Name, Image, valid ZIP Code, or At least one contact detail this will result in an error.
 
 ![make profile error](./.github/readme-images/make_profile_error.jpg)
 
