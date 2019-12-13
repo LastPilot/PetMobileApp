@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<ScrollView
     android:layout_height="wrap_content"
     android:layout_width="wrap_content">
 
@@ -104,21 +104,22 @@
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/petBioEdit"
-            android:layout_width="339dp"
+            android:layout_width="wrap_content"
             android:layout_height="91dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="13dp"
-            android:layout_marginEnd="48dp"
+            android:layout_marginEnd="55dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:hint="@string/bio_hint"
             android:inputType="textPersonName"
+            app:bootstrapBrand="info"
+            app:bootstrapSize="lg"
             app:layout_constraintBottom_toTopOf="@+id/contact_info_title"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bio_title"
-            app:bootstrapBrand="info"
-            app:bootstrapSize="lg"/>
+            app:layout_constraintTop_toBottomOf="@+id/bio_title" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/contact_info_title"
@@ -128,13 +129,13 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="251dp"
             android:layout_marginBottom="8dp"
+            app:bootstrapBrand="primary"
+            app:bootstrapText="@string/contact_info_title"
             app:layout_constraintBottom_toTopOf="@+id/ownerEmail"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/petBioEdit"
-            app:bootstrapText="@string/contact_info_title"
-            app:bootstrapBrand="primary"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/petBioEdit" />
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/ownerEmail"
@@ -166,11 +167,12 @@
             android:hint="@string/phoneHint"
             android:inputType="phone"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownerEmail"
             app:bootstrapBrand="info"
-            app:bootstrapSize="lg"/>
+            app:bootstrapSize="lg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ownerEmail" />
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/ownerZip"
